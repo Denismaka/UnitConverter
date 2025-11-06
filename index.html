@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>    
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="UnitConverter - Convertisseur d'unités professionnel : longueur, poids, volume, température" />
+        <meta name="keywords" content="unitconverter, convertisseur, unités, conversion, longueur, poids, volume, température" />
+        
+        <!-- Styles CSS -->
+        <link rel="stylesheet" href="style.css" />
+        
+        <title>UnitConverter - Convertisseur d'unités</title>
+    </head>
+    <body>
+        <!-- ################### -->
+        <!-- container principal -->
+        <!-- ################### -->
+        <div class="container">
+            <header class="header">
+                <h1>UnitConverter</h1>
+                <div class="header-actions">
+                    <button id="themeBtn" class="icon-btn" aria-label="Changer le thème" title="Mode sombre/clair">
+                        <span>🌙</span>
+                    </button>
+                    <button id="historiqueBtn" class="icon-btn" aria-label="Voir l'historique" title="Historique">
+                        <span>📋</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- ################### -->
+            <!-- controls-group -->
+            <!-- ################### -->
+            <div class="controls-group">
+                <div class="control-item">
+                    <label for="categorie">Catégorie</label>
+                    <select id="categorie" aria-label="Catégorie de conversion">
+                        <option value="longueur">Longueur</option>
+                        <option value="poids">Poids</option>
+                        <option value="volume">Volume</option>
+                        <option value="temperature">Température</option>
+                    </select>
+                </div>
+                <div class="control-item">
+                    <label for="precision">Précision</label>
+                    <select id="precision" aria-label="Précision des décimales">
+                        <option value="auto">Auto</option>
+                        <option value="0">0 décimales</option>
+                        <option value="1">1 décimale</option>
+                        <option value="2">2 décimales</option>
+                        <option value="3">3 décimales</option>
+                        <option value="4">4 décimales</option>
+                        <option value="6">6 décimales</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- ################# -->
+            <!-- conversion-group -->
+            <!-- ################# -->
+            <div class="conversion-group">
+                <div class="input-group">
+                    <label for="input">Valeur</label>
+                    <input
+                        type="number"
+                        placeholder="Entrer une valeur"
+                        id="input"
+                        step="any"
+                        aria-label="Valeur à convertir"
+                        autocomplete="off"
+                    />
+                    <select id="unites" aria-label="Unité source">
+                        <!-- Les options sont générées dynamiquement par src/app.js -->
+                    </select>
+                </div>
+
+                <!-- Bouton pour échanger les unités source et destination -->
+                <button id="swapBtn" class="swap-btn" aria-label="Échanger les unités" title="Échanger les unités">
+                    ⇄
+                </button>
+
+                <div class="input-group">
+                    <label for="resultat">Résultat</label>
+                    <input 
+                        type="text" 
+                        id="resultat" 
+                        placeholder="Résultat" 
+                        readonly
+                        aria-label="Résultat de la conversion"
+                    />
+                    <select id="unitesResultat" aria-label="Unité de destination">
+                        <!-- Les options sont générées dynamiquement par app.js -->
+                    </select>
+                </div>
+            </div>
+
+            <!-- Boutons d'action -->
+            <div class="buttons-group">
+                <button id="clearBtn" class="clear-btn">Effacer</button>
+            </div>
+        </div>
+
+        <!-- #################### -->
+        <!-- Panneau d'historique -->
+        <!-- #################### -->
+        <div id="historiquePanel" class="historique-panel">
+            <div class="historique-header">
+                <h2>Historique des conversions</h2>
+                <div class="historique-actions">
+                    <button id="effacerHistorique" class="btn-small">Effacer</button>
+                    <button id="fermerHistorique" class="icon-btn" aria-label="Fermer">
+                        <span>✕</span>
+                    </button>
+                </div>
+            </div>
+            <!-- Contenu de l'historique généré dynamiquement -->
+            <div class="historique-content"></div>
+        </div>
+
+
+        <script type="module" src="src/app.js"></script>
+    </body>
+</html>
