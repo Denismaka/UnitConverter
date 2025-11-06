@@ -136,3 +136,21 @@ Développé avec ❤️ pour une expérience de conversion optimale.
 
 **Note** : Ce projet est en constante évolution. N'hésitez pas à contribuer !
 
+
+## 📬 Contact
+
+Pour toute question, collaboration ou devis :
+
+-   **Email** : makadenis370@gmail.com
+
+-   **Téléphone** : +243 818 252 385 / +243 997 435 030
+
+-   **Réseaux sociaux** :
+
+    -   [Twitter](https://twitter.com/MakaDenis3)
+
+    -   [LinkedIn](https://www.linkedin.com/in/Denismaka)
+
+    -   [GitHub](https://github.com/Denismaka)
+
+    -   [Facebook](https://www.facebook.com/Denismaka)
